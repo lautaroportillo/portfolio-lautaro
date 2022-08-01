@@ -7,7 +7,7 @@ if($_POST){
     $telefono = $_POST["txtTelefono"];
     $mensaje = $_POST["txtMensaje"];
     
-    if($nombre != "" && $correo != "" && $telefono != "" && $mensaje !="")
+    if($nombre != "" && $correo != "" && $telefono != "" && $mensaje !=""){
 
     // Varios destinatarios
     $para = "portillolautaro1010@gmail.com";
@@ -26,12 +26,13 @@ if($_POST){
     $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
     // Cabeceras adicionales
-    $cabeceras .= 'To: nelson.tarche@gmail.com' . "\r\n";
+    $cabeceras .= 'To: portillolautaro1010@gmail.com' . "\r\n";
     $cabeceras .= 'From: contacto@nelsontarche.com.ar' . "\r\n";
 
     // Enviarlo
     //mail($para, $titulo, $cuerpo, $cabeceras);
-    header("Location: confirmacion-mail.php");
+    header("Location: confirmacion_mail.php");
+}
 }
 ?>
 
